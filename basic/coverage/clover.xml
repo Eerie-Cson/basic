@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1647488700287" clover="3.2.0">
+  <project timestamp="1647488700287" name="All files">
+    <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="8" elements="34" coveredelements="33" complexity="0" loc="25" ncloc="25" packages="1" files="5" classes="5"/>
+    <file name="basic-array.js" path="C:\Users\R.A GADGETS\Desktop\OJT Files\Initialize the project\basic\basic-array.js">
+      <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+    </file>
+    <file name="basic-string-repeatN.js" path="C:\Users\R.A GADGETS\Desktop\OJT Files\Initialize the project\basic\basic-string-repeatN.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+    </file>
+    <file name="basic-string.js" path="C:\Users\R.A GADGETS\Desktop\OJT Files\Initialize the project\basic\basic-string.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="10" type="stmt"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+    </file>
+    <file name="basic.js" path="C:\Users\R.A GADGETS\Desktop\OJT Files\Initialize the project\basic\basic.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+    </file>
+    <file name="sum.js" path="C:\Users\R.A GADGETS\Desktop\OJT Files\Initialize the project\basic\sum.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
