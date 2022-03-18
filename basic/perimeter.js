@@ -4,5 +4,4 @@ function perimeter(width, height){
   }
   return 2*(width + height);
 }
-
 module.exports=perimeter
