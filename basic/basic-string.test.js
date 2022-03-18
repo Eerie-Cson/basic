@@ -4,7 +4,7 @@ const basicString = new BasicString();
 
 
 describe('BasicStringRepeat', function () {
-    it('should be aaaa, given a string a', function () {
+    it('should be aaaaa, given a string a', function () {
       expect(basicString.repeat('a')).toBe('aaaaa');
     });
 
