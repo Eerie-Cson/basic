@@ -9,6 +9,6 @@ describe('BasicArray', function () {
   });
 
   it('should throw Error, given an empty array', function(){
-    expect(basicArray.sum([])).toBe(0);
+    expect(() => basicArray.sum([])).toThrow("Empty Array!");
   })
 })
