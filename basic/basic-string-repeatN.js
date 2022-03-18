@@ -1,12 +1,6 @@
 class BasicString{
-    repeatWithN(string,count){
-        let stringHolder = "";
-        while(count>0){
-            stringHolder = stringHolder + string;
-            count--;
-        }
-        return stringHolder;
-    }
+  repeatWithN(str, count){
+    return [...Array(count)].map(e => e = str).join("");
 }
-
+}
 module.exports = BasicString;
