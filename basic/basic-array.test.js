@@ -1,7 +1,6 @@
 const BasicArray = require('./basic-array');
 
 const basicArray = new BasicArray();
-let n = 3;
 
 describe('BasicArray', function () {
   it('should be 6, given an array of [1,2,3]', function () {
