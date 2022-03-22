@@ -3,9 +3,14 @@ const Shape = require('./conditional-area');
 
 describe('ConditionalArea', function(){
   
-  it('should calculate circle area', function(){
+  it('should calculate circle area given the correct parameter, otherwise throw error', function(){
     const shape = new Shape('circle');  
     expect(shape.area({radius: 10})).toEqual(314.1592653589793);
+    expect(()=>shape.area({})).toThrow("Wrong parameters for the given shape: Circle");
+    expect(()=>shape.area({width: 10, height:10 })).toThrow("Wrong parameters for the given shape: Circle");
+    expect(()=>shape.area({width: 10 })).toThrow("Wrong parameters for the given shape: Circle");
+    expect(()=>shape.area({radius: 10, width: 10 })).toThrow("Wrong parameters for the given shape: Circle");
+
   });
 
   it('should calculate rectangle area', function(){
@@ -22,12 +27,12 @@ describe('ConditionalArea', function(){
     const shape = new Shape('pentagon');   
     expect(()=> shape.area({base: 2, height: 10})).toThrow("Shape is not available");
   });
-
+/*
   it('should throw error, given the wrong parameter', function(){
     const shape = new Shape('circle');  
-    expect(()=>shape.area({width: 10, height:10 })).toThrow("Wrong parameters for the given shape: Circle");
+    ;
   });
-
+*/
 
 
 
