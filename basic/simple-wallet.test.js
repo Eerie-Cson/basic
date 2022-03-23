@@ -22,7 +22,7 @@ describe('SimpleWallet', function() {
     expect(wallet.withdraw(50)).toEqual(150);
     expect(wallet.balance).toEqual(150);
   });
-
+  
   it('should accept string balance with a number value', function(){
     expect(wallet.deposit('100')).toEqual(250);
     expect(wallet.deposit('30')).toEqual(280);
