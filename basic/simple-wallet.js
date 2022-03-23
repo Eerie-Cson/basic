@@ -8,7 +8,7 @@ class Wallet{
     this.balance += ~~newBalance;
     return this.balance;
   }
-
+  
   withdraw(newBalance){
     if(newBalance>this.balance)
       throw new Error("Insufficient Balance!");
