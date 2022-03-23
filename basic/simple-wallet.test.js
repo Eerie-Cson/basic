@@ -2,6 +2,11 @@ const Wallet = require('./simple-wallet');
 const wallet = new Wallet();
 
 describe('SimpleWallet', function() {
+
+  beforeEach(function () {
+    this.wallet = new Wallet();
+  });
+
   it('should display 0 balance, given that current balance = 0', function(){
     expect(wallet.balance).toEqual(0);
   });
@@ -24,9 +29,11 @@ describe('SimpleWallet', function() {
     expect(wallet.deposit('test')).toEqual(280);
   });
 
-  it('should throw error', function(){
+  it('should throw an error when no value was deposited', function(){
     expect(()=>wallet.deposit(0)).toThrow("No value to deposit!");
+  });
+
+  it('should throw an error when withdrawing insufficient balance', function(){  
     expect(()=>wallet.withdraw(500)).toThrow("Insufficient Balance!");
   });
-  
-});
+})
