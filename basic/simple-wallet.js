@@ -1,5 +1,4 @@
 class Wallet{
-  
   balance = 0;
 
   deposit(newBalance){
@@ -10,20 +9,11 @@ class Wallet{
     return this.balance;
   }
 
-
   withdraw(newBalance){
     if(newBalance>this.balance)
       throw new Error("Insufficient Balance!");
-
     this.balance -= ~~newBalance;
     return this.balance;
-  }
-
-    
-
-  
+  }  
 };
-
-
 module.exports =  Wallet;
-
