@@ -1,4 +1,3 @@
-
 const R = require('Ramda');
 class BasicArray{
   sum(numbers){
@@ -9,6 +8,4 @@ class BasicArray{
 
   }
 }
-
-
 module.exports = BasicArray;
