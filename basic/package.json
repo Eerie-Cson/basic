@@ -1,7 +1,6 @@
 {
   "name": "internship-training",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"
@@ -21,6 +20,8 @@
     "jest": "^27.5.1"
   },
   "dependencies": {
-    "koa": "^2.13.4"
-  }
+    "koa": "^2.13.4",
+    "ramda": "^0.28.0"
+  },
+  "description": ""
 }

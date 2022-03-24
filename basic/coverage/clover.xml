@@ -1,50 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647829439894" clover="3.2.0">
-  <project timestamp="1647829439894" name="All files">
-    <metrics statements="23" coveredstatements="23" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="46" coveredelements="46" complexity="0" loc="23" ncloc="23" packages="1" files="7" classes="7"/>
-    <file name="area.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\area.js">
-      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="2" count="3" type="cond" truecount="4" falsecount="0"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-    </file>
-    <file name="basic-array.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\basic-array.js">
-      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-    </file>
-    <file name="basic-string-repeatN.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\basic-string-repeatN.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="3" count="5" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-    </file>
-    <file name="basic-string.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\basic-string.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="3" count="10" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-    </file>
-    <file name="basic.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\basic.js">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-    </file>
-    <file name="perimeter.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\perimeter.js">
-      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <line num="2" count="5" type="cond" truecount="4" falsecount="0"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-    </file>
-    <file name="sum.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\sum.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-    </file>
+<coverage generated="1648080655887" clover="3.2.0">
+  <project timestamp="1648080655887" name="All files">
+    <metrics statements="57" coveredstatements="57" conditionals="34" coveredconditionals="34" methods="16" coveredmethods="16" elements="107" coveredelements="107" complexity="0" loc="57" ncloc="57" packages="4" files="10" classes="10"/>
+    <package name="arrays">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="basic-array.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\arrays\basic-array.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="numbers">
+      <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
+      <file name="area.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\numbers\area.js">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="basic.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\numbers\basic.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="perimeter.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\numbers\perimeter.js">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="sum.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\numbers\sum.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="objects">
+      <metrics statements="31" coveredstatements="31" conditionals="24" coveredconditionals="24" methods="6" coveredmethods="6"/>
+      <file name="conditional-area.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\objects\conditional-area.js">
+        <metrics statements="15" coveredstatements="15" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="8" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="simple-wallet.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\objects\simple-wallet.js">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="5" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="sum-of-all-tails.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\objects\sum-of-all-tails.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="strings">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="basic-string-repeatN.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\strings\basic-string-repeatN.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="basic-string.js" path="C:\Users\R.A GADGETS\Desktop\internship-training\basic\strings\basic-string.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

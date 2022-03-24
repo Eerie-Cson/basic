@@ -1,4 +1,4 @@
-const R = require('Ramda');
+const R = require('ramda');
 class BasicString{
   repeatWithN(str, count){ 
     return R.join('',R.repeat(str,count))
