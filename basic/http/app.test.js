@@ -7,9 +7,9 @@ describe('app', () => {
 	
 	// This is a hook for test, it means we're closing the PORT after all
   // the assertions are done
-//  afterAll(() => {
-//    server.close();
-//  });
+  afterAll(() => {
+    server.close();
+  });
 
   it('should have the response status of 200', async () => {
 		// We're requesting to localhost:8080/
