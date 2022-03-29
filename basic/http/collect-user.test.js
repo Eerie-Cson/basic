@@ -1,6 +1,10 @@
 const request = require('supertest');
 const argon2 = require('argon2');
 const { app, hashPassword} = require('./collect-user');
+const {Chance} = require('chance');
+const { expect } = require('@jest/globals');
+
+const chance = new Chance();
 
 describe('app', () => {
   afterAll(() => {
@@ -26,8 +30,11 @@ describe('app', () => {
     expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
   it('should add another object with a password', async () => {
-    const response = await request(server).post('/users');
-    expect((Object.keys(response.body.data[0]))).toStrictEqual(["id","name","password"]);    
+    const name = chance.name();
+    const id = chance.natural();
+    const response = await request(server).post('/users').send({name, id});
+    expect(response.body.data[response.body.data.length-1])
+      .toStrictEqual({name, id});
   });
   
   
