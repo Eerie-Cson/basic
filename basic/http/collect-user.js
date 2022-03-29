@@ -5,10 +5,14 @@ const argon2 = require('argon2');
 const app = new Koa(),
  router =  new Router();
 
- async function hashPassword(password){
-   const hash = await argon2.hash(password);
-   return toString(hash);
- }
+ async function hashPassword(str){
+  try {
+    const hash = await argon2.hash(str);
+  } 
+  catch (err) {
+      throw new Error('Error');
+  };
+}
 
 class User {
   data =  {    
@@ -30,6 +34,7 @@ app.use(router.routes());
 
 module.exports = {
   app,
-  hashPassword
+  hashPassword,
+  argon2
 };
 
