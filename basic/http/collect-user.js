@@ -30,7 +30,14 @@ router.get( '/users', async ctx => {
       return {id:e.id,name:e.name}; 
     })
   };
-
+});
+router.post('/users',async ctx => {
+  ctx.body = 
+    {data:user.data.map(
+        (e)=> {
+          return{id:e.id, name:e.name, password:e.password}
+        })
+    }
 });
 app.use(router.routes());
 

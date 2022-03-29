@@ -25,5 +25,10 @@ describe('app', () => {
     const response = await request(server).get('/users');
     expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
+  it('should add another object with a password', async () => {
+    const response = await request(server).post('/users');
+    expect((Object.keys(response.body.data[0]))).toStrictEqual(["id","name","password"]);    
+  });
+  
   
 });
