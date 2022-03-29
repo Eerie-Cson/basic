@@ -1,5 +1,6 @@
 const request = require('supertest');
-const { app, hashPassword,argon2 } = require('./collect-user');
+const argon2 = require('argon2');
+const { app, hashPassword} = require('./collect-user');
 
 describe('app', () => {
   afterAll(() => {
@@ -16,25 +17,13 @@ describe('app', () => {
   });
   it('should accept string password', async () => {
     const str = 'testing';
-    const hashedPassword = hashPassword(str);
-    const verified = await argon2.verify("<big long hash>", "password");
+    const hashedPassword = await hashPassword(str);
+    const verified = await argon2.verify(hashedPassword, str);
     expect(verified).toBe(true);
   });
-
-  it('should have the correct response body', async () => {
+  it('should not display password', async () => {
     const response = await request(server).get('/users');
-    expect(response.body).toStrictEqual({
-      "data": {
-        "users": [
-          {
-            "id": "1",
-            "name": "the name",
-            "email": "thename@gmail.com",
-            "password": "random string"
-          }
-        ]
-      }
-    });
+    expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
   
 });
