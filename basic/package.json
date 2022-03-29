@@ -1,29 +1,21 @@
 {
-  "name": "internship-training",
+  "name": "basic",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Eerie-Cson/basic.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Eerie-Cson/basic/issues"
-  },
-  "homepage": "https://github.com/Eerie-Cson/basic#readme",
   "devDependencies": {
-    "jest": "^27.5.1",
-    "supertest": "^6.2.2"
+    "jest": "^27.5.1"
   },
   "dependencies": {
     "koa": "^2.13.4",
     "koa-router": "^10.1.1",
-    "ramda": "^0.28.0"
-  },
-  "description": ""
+    "ramda": "^0.28.0",
+    "supertest": "^6.2.2"
+  }
 }

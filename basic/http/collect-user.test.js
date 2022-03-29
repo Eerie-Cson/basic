@@ -8,7 +8,7 @@ describe('app', () => {
     const response = await request(server).get('/users');
     expect(response.status).toBe(200)
   });
-
+  
   it('should have the correct response body', async () => {
     const response = await request(server).get('/users');
     expect(response.body).toStrictEqual({
