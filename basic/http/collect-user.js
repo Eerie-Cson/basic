@@ -1,27 +1,41 @@
 const Koa = require('koa');
 const Router = require('koa-router');
+const {Chance} = require('chance');
+const R = require('ramda');
+const argon2 = require('argon2');
 
 const app = new Koa(),
  router =  new Router();
+const chance = new Chance();
+
+ async function hashPassword(str){
+  const hash = await argon2.hash(str);
+  return hash;
+}
 
 class User {
-  data =  {    
-    "users":
-      [{
-        "id":"1",
-        "name":"the name",
-        "email":"thename@gmail.com",
-        "password":"random string"
-      }]
-  };
+  data =  R.times(()=>{
+    return {
+      id:chance.natural(),
+      name:chance.name(),
+      password: chance.string()
+    }
+  })(3);
 
 };
 
-const user = new User(); 
+const user = new User();
 router.get( '/users', async ctx => {
-  ctx.body = user;
+  ctx.body = {data:user.data.map((e)=>{
+      return {id:e.id,name:e.name}; 
+    })
+  };
+
 });
 app.use(router.routes());
 
-module.exports = app;
+module.exports = {
+  app,
+  hashPassword
+};
 
