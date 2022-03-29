@@ -29,6 +29,7 @@ class User {
 };
 
 const user = new User();
+
 router.get( '/users', async ctx => {
   ctx.body = {
     data:user.data.map((e)=>{
@@ -36,6 +37,7 @@ router.get( '/users', async ctx => {
     })
   };
 });
+
 router.post('/users',async ctx => {
   user.data.push(ctx.request.body);
   
@@ -45,6 +47,17 @@ router.post('/users',async ctx => {
     })
   };
 });
+
+router.patch('/users',async ctx => {
+  user.data[1] = ctx.request.body;
+  
+  ctx.body = {
+    data:user.data.map((e)=>{
+      return {id:e.id,name:e.name}; 
+    })
+  };
+});
+
 app.use(router.routes());
 
 module.exports = {
