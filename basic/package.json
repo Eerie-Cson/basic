@@ -1,7 +1,19 @@
 {
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "argon": "^2.0.21",
+    "argon2": "^0.28.5",
+    "chance": "^1.1.8",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "ramda": "^0.28.0",
+    "supertest": "^6.2.2"
+  },
   "name": "basic",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -9,17 +21,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^27.5.1"
-  },
-  "dependencies": {
-    "argon2": "^0.28.5",
-    "chance": "^1.1.8",
-    "koa": "^2.13.4",
-    "koa-bodyparser": "^4.3.0",
-    "koa-router": "^10.1.1",
-    "ramda": "^0.28.0",
-    "supertest": "^6.2.2",
-    "uuid": "^8.3.2"
-  }
+  "description": ""
 }
