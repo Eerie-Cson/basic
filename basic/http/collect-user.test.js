@@ -2,6 +2,7 @@ const request = require('supertest');
 const argon2 = require('argon2');
 const { app, hashPassword} = require('./collect-user');
 const {Chance} = require('chance');
+const { expect } = require('@jest/globals');
 
 const chance = new Chance();
 
@@ -26,6 +27,7 @@ describe('app', () => {
   });
   it('should not display password', async () => {
     const response = await request(server).get('/users');
+    console.log(response.body.data);
     expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
 
@@ -38,14 +40,13 @@ describe('app', () => {
       .toStrictEqual({name, id});
   });
 
-  it.only('should update existing object', async() =>{  
+  it('should update existing object', async() =>{  
 
       const fetchResponse = await request(server).get(`/users`);
       const firstUser = fetchResponse.body.data[0];
       const updateResponse = await request(server).patch(`/users/${firstUser.id}`).send({name: 'hello'});
-
-      expect(updateResponse.body.data[0].name)
-      .toStrictEqual(firstUser.name);
+      expect(updateResponse.body.data).toBe('hello');
+      expect(updateResponse.body.data[0].name).not.toStrictEqual(firstUser.name);
     
   })
   

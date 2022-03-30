@@ -49,13 +49,26 @@ router.post('/users',async ctx => {
 });
 
 router.patch('/users/:id',async ctx => {  
-  user.data[R.indexOf(ctx.params.id, user.data)] = ctx.request.body;
 
+  const updateUser = user.data;
+  for (const obj of updateUser) {
+    if (obj.updateUser.id === ctx.params.id) {
+      obj.name = ctx.request.body;
+
+    break;
+  }
+  const updated = user.data;
   ctx.body = {
-    data:user.data.map((e)=>{
+    data:updated.map((e)=>{
       return {id:e.id,name:e.name}; 
     })
-  };
+  }
+
+
+}
+
+  
+  
 });
 
 app.use(router.routes());
