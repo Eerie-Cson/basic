@@ -45,7 +45,7 @@ describe('app', () => {
       const fetchResponse = await request(server).get(`/users`);
       const firstUser = fetchResponse.body.data[0];
       const updateResponse = await request(server).patch(`/users/${firstUser.id}`).send({name: 'hello'});
-      expect(updateResponse.body.data).toBe('hello');
+      expect(updateResponse.body.data[0].name).toBe('hello');
       expect(updateResponse.body.data[0].name).not.toStrictEqual(firstUser.name);
     
   })

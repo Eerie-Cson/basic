@@ -28,10 +28,11 @@ class User {
 };
 
 const user = new User();
+const userData = user.data;
 
 router.get( '/users', async ctx => {
   ctx.body = {
-    data:user.data.map((e)=>{
+    data:userData.map((e)=>{
       return {id:e.id,name:e.name}; 
     })
   };
@@ -39,10 +40,10 @@ router.get( '/users', async ctx => {
 
 router.post('/users',async ctx => {
   
-  user.data.push(ctx.request.body);
+  userData.push(ctx.request.body);
   
   ctx.body = {
-    data:user.data.map((e)=>{
+    data:userData.map((e)=>{
       return {id:e.id,name:e.name}; 
     })
   };
@@ -50,24 +51,21 @@ router.post('/users',async ctx => {
 
 router.patch('/users/:id',async ctx => {  
 
-  const updateUser = user.data;
-  for (const obj of updateUser) {
-    if (obj.updateUser.id === ctx.params.id) {
-      obj.name = ctx.request.body;
+  for (const obj of userData) {
 
-    break;
+    if (obj.id == ctx.params.id) {
+      obj.name = ctx.request.body.name;
+      break;
+    }
+    
   }
-  const updated = user.data;
+ 
+  const updated = userData;
   ctx.body = {
     data:updated.map((e)=>{
       return {id:e.id,name:e.name}; 
     })
   }
-
-
-}
-
-  
   
 });
 
