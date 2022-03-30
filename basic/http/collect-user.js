@@ -5,6 +5,7 @@ const BodyParser = require('koa-bodyparser');
 const R = require('ramda');
 const argon2 = require('argon2');
 const bodyParser = require('koa-bodyparser');
+const indexOf = require('ramda/src/indexOf');
 
 const app = new Koa(),
  router =  new Router();
@@ -49,7 +50,7 @@ router.post('/users',async ctx => {
 });
 
 router.patch('/users',async ctx => {
-  user.data[1] = ctx.request.body;
+  //user.data[indexOf(ctx.request.params.id)] = ctx.request.body;
   
   ctx.body = {
     data:user.data.map((e)=>{

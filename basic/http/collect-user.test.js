@@ -4,9 +4,7 @@ const { app, hashPassword} = require('./collect-user');
 const {Chance} = require('chance');
 const { expect } = require('@jest/globals');
 
-const chance = new Chance(),
-  name = chance.name(),
-  id = chance.natural();
+const chance = new Chance();
 
 describe('app', () => {
   afterAll(() => {
@@ -27,13 +25,15 @@ describe('app', () => {
     const verified = await argon2.verify(hashedPassword, str);
     expect(verified).toBe(true);
   });
-  it.only('should not display password', async () => {
+  it('should not display password', async () => {
     const response = await request(server).get('/users');
-    console.log(response.body.data);
     expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
 
   it('should add another object with a password', async () => {
+    const name = chance.name(),
+    id = chance.natural();
+  
     const response = await request(server).post('/users').send({name, id});
     expect(response.body.data[response.body.data.length-1])
       .toStrictEqual({name, id});
@@ -41,10 +41,9 @@ describe('app', () => {
 
   it.only('should update existing object', async() =>{
 
-    const response = await request(server).patch('/users').send({name, id});
-    console.log(response.body.data);
-    expect(response.body.data[1])
-      .toStrictEqual({name, id});
+    const response = await request(server).patch('/users/:id').send({id:request.params.id, name:"abcd"});
+    expect (Object.values(response.body.data[0]))
+      .toStrictEqual([id, "abcd"]);
   })
   
   
