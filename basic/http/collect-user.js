@@ -66,13 +66,31 @@ router.patch('/users/:id',async ctx => {
       break;
     }  
   };
-  const updated = userData;
+  const updatedUserData = userData;
   ctx.body = {
-    data:updated.map((e)=>{
+    data:updatedUserData.map((e)=>{
       return {id:e.id,name:e.name}; 
     })
-  }  
+  }
 });
+
+router.delete('/users/:id',async ctx => {
+  
+  for(var i=0; i<userData.length; i++){
+    if(userData[i].id == ctx.params.id){
+      userData.splice(i,1);
+      break;
+    }
+  }
+  const updatedUserData = userData;
+  
+  ctx.body = {
+    data:updatedUserData.map((e)=>{
+      return {id:e.id,name:e.name}; 
+    })
+  }
+})
+
 
 app.use(router.routes());
 module.exports = {
