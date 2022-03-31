@@ -28,7 +28,7 @@ describe('app', () => {
     expect(Object.keys(response.body.data[0])).toStrictEqual(["id","name"]);    
   });
 
-  it('should add another object with a password', async () => {
+  it('should add another user data object', async () => {
     const name = chance.name(),
     id = chance.natural();
   
@@ -37,8 +37,7 @@ describe('app', () => {
       .toStrictEqual({name, id});
   });
 
-  it('should update existing object', async() =>{  
-
+  it('should update corresponding user data, given the id ', async() =>{  
       const fetchResponse = await request(server).get(`/users`);
       const firstUser = fetchResponse.body.data[0];
       const updateResponse = await request(server).patch(`/users/${firstUser.id}`).send({name: 'hello'});
@@ -52,5 +51,16 @@ describe('app', () => {
     const response = await request(server).get(`/users/${secondUser.id}`);
     expect(response.body.data).toStrictEqual(secondUser);
   });
+
+  it('should delete corresponding user data, given the id ', async() =>{
+    const fetchResponse = await request(server).get('/users');
+    const thirdUser = fetchResponse.body.data[2];
+    const deleteResponse = await request(server).delete(`/users/${thirdUser.id}`);
+
+    expect(Object.values(deleteResponse.body.data)).not.toContain(Object.values(thirdUser));
+    expect(deleteResponse.body.data).not.toStrictEqual(fetchResponse.body.data);
+    expect(fetchResponse.body.data.length-1).toBe(deleteResponse.body.data.length)
+
+  })
 
 });
