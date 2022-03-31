@@ -38,6 +38,18 @@ router.get( '/users', async ctx => {
   }
 });
 
+router.get( '/users/:id', async ctx => { 
+  for(var i=0; i<userData.length; i++){
+    if(userData[i].id == ctx.params.id){
+      found = userData[i];
+      break;
+    }
+  }
+  ctx.body = {
+    data:{name: found.name, id: found.id}
+  };
+});
+
 router.post('/users',async ctx => {
   userData.push(ctx.request.body);
   ctx.body = {
@@ -49,13 +61,11 @@ router.post('/users',async ctx => {
 
 router.patch('/users/:id',async ctx => {  
   for (const obj of userData) {
-
     if (obj.id == ctx.params.id) {
       obj.name = ctx.request.body.name;
       break;
     }  
   };
- 
   const updated = userData;
   ctx.body = {
     data:updated.map((e)=>{
